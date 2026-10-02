@@ -51,7 +51,7 @@ Tokens em `:root` de `style.css`:
 - Durações e easing ficam no CSS (`--motion-fast/ui/medium/reveal`, `--ease`) e são lidos pelo JS via `getComputedStyle`. Limites de movimento ficam no objeto `interaction` no topo do `script.js`.
 - Conteúdo é visível por padrão: o CSS base nunca esconde nada; os reveals são aplicados pelo JS (Web Animations API + IntersectionObserver). Sem JS ou com reduced motion, a página deve continuar completa.
 - Breakpoints duplicados entre CSS (1700, 1100, 860, 620px) e JS (`innerWidth <= 860`, `> 620`, media query `precisePointer` com `min-width: 861px`). Mudar um exige mudar o outro.
-- Cursor customizado e efeitos de ponteiro só rodam com `(hover: hover) and (pointer: fine)` e sem `prefers-reduced-motion`; CSS e JS usam a mesma condição.
+- Cursor: o site inteiro usa o cursor nativo do navegador. O cursor customizado azul com "Visitar" existe somente na área interativa do projeto VS Tattoo Studio (`.project-stage`, classe `cursor-custom` no `body`): aparece ao entrar e some imediatamente ao sair, voltando ao cursor normal. Os efeitos de luz, profundidade e interação do projeto continuam funcionando normalmente. Em touch/mobile não existe cursor customizado (só roda com `(hover: hover) and (pointer: fine)`; CSS e JS usam a mesma condição).
 - Efeitos de scroll ficam no único `requestAnimationFrame` (`queueScroll` → `updateScroll`), lendo layout antes de escrever.
 - FAQ usa `<details>` nativo com transição em CSS Grid, sem animar altura via JS.
 
