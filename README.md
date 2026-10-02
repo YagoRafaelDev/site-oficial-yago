@@ -14,6 +14,13 @@ Este é o site que apresenta o trabalho de Yago Rafael para pequenos negócios e
 
 O projeto não usa framework, bundler nem dependências. A única fonte externa é o Google Fonts.
 
+## Ferramentas de desenvolvimento
+
+- **Git e GitHub** para versionamento.
+- **Claude Code**, da Anthropic, como apoio ao desenvolvimento: análise do código, implementação e refinamento, refatoração, testes, otimização e revisão técnica.
+
+A direção do projeto, a identidade visual, o conteúdo, as decisões de design e os objetivos foram definidos pelo autor.
+
 ## Principais características
 
 - Layout responsivo, pensado separadamente para desktop, tablet e celular.
